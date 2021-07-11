@@ -5,7 +5,7 @@ const fs = require('fs');
 const data = []
 
 
-router.get("/notes", (req, res) => {
+router.get("./notes", (req, res) => {
   fs.readFile(
     "../../express-note-taker/Develop/db/db.json",
     "utf8",
@@ -20,7 +20,7 @@ router.get("/notes", (req, res) => {
   );
 });
 
-router.post("/notes", (req, res) => {
+router.post("./notes", (req, res) => {
   data.push(req.body);
   data.forEach((item, i) => {
     item.id = i + 1;
