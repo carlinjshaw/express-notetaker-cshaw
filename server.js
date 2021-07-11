@@ -10,7 +10,7 @@ const htmlRoutes = require('./routes/htmlRoutes');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 //i think this uses the static files that are in public directory
-app.use(express.static('public'));
+app.use(express.static('./public'));
 
 // Use apiRoutes
 app.use('/api', apiRoutes);
