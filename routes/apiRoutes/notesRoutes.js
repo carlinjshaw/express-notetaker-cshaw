@@ -2,7 +2,7 @@ const router = require('express').Router();
 const fs = require('fs');
 const path = require('path')
 //sets data as empty array
-const data = []
+const data = JSON.parse(fs.readFileSync(path.join(__dirname, "../../db/db.json"), "utf8")) || [];
 
 
 router.get("/notes", (req, res) => {
