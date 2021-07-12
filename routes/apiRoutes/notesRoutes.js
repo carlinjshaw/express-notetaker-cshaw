@@ -1,14 +1,12 @@
 const router = require('express').Router();
 const fs = require('fs');
-
+const path = require('path')
 //sets data as empty array
 const data = []
 
 
 router.get("/notes", (req, res) => {
-  fs.readFile(
-    "../../express-note-taker/Develop/db/db.json",
-    "utf8",
+  fs.readFile(path.join(__dirname, "../../db/db.json"), "utf8",
     (err, data) => {
       if (err) {
         console.error(err);
@@ -28,8 +26,7 @@ router.post("/notes", (req, res) => {
 
   const dataJson = JSON.stringify(data);
 
-  fs.writeFile(
-    "../../express-note-taker/Develop/db/db.json",
+  fs.writeFile(path.join(__dirname, "../../db/db.json"),
     dataJson,
     (err) => {
       if (err) console.log(err);
