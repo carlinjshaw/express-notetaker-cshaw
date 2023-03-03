@@ -1,15 +1,8 @@
 # express-notetaker-cshaw
-
-
-live heroku site: https://express-note-taker-cshaw.herokuapp.com/
-
-This site uses node.js and express to handle the back-end responsibilities of responsding the fetch requests from the user. 
-the router module of express handles the changing html page, from the index file, to the place that users can enter information. 
-
-Once user input is entered, the fetch request commences.
-The express.get method takes the data that is currently in the Json file and sends it to the front end. 
-The express.post method takes user input and adds it to the Json file.
-The get and post methods loop to continuously and immediately update the front end for the user. 
+# SUMMARY
+This application uses node.js and express to handle the back-end responsibilities of responsding the fetch requests from the user. 
+The router module of express serves several HTML pages and API requests to get and post notes. The get and post routes respond using 
+the file system npm package to edit a JSON file asynchronously, which acts as a database. 
 
 
 ![image](https://user-images.githubusercontent.com/82618604/125327999-c8ef3080-e311-11eb-9bdb-5ca5d63a35db.png)
